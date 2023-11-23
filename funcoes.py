@@ -1,4 +1,4 @@
-# Exercício 01
+# Exercício 01 ------------------------------------------------------------
 def opMatematicos(a, b):
     print("-"*30)
     print("OPERADORES MATEMÁTICOS")
@@ -34,12 +34,34 @@ OU = TRUE OR FALSE
 NÃO = NOT TRUE
 """)
 
-# Exercicio 02
+# Exercicio 02 ------------------------------------------------------------
 
-def verifacaoIdade(idade):
+def verifacaoIdade(idade, maiorIdade):
     if idade < 13:
         print("Você é uma criança")
+        maiorIdade = False
     elif idade < 19:
         print("Você é um adolescente")
+        maiorIdade = True
     else:
         print("Você é um adulto")
+        maiorIdade = True
+
+    if maiorIdade:
+        print("Você é maior de idade")
+    else:
+        print("Você é menor de idade")
+
+
+def nacionalidade(nacio):
+    # Passando o valor da variavel brasileiro para booleano
+    if nacio == "SIM":
+        nacio = True
+    else:
+        nacio = False
+
+    # Condicional de impressão de nacionalidade
+    if nacio:
+        print("Você é brasileiro")
+    else:
+        print("Você não é brasileiro")
