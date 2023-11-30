@@ -65,3 +65,20 @@ def nacionalidade(nacio):
         print("Você é brasileiro")
     else:
         print("Você não é brasileiro")
+    
+# Exercicio 03 ------------------------------------------------------------
+
+# Exercicio 04 ------------------------------------------------------------
+
+def calcularCustoViagem(distancia, tipoVeiculo):
+    if tipoVeiculo == "CARRO":
+        custoPorKm = 0.5
+    elif tipoVeiculo == "MOTO":
+        custoPorKm = 0.2
+    elif tipoVeiculo == "BICICLETA":
+        custoPorKm = 0.1
+    else:
+        return None
+    
+    custoTotal = distancia * custoPorKm
+    return custoTotal

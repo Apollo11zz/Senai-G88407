@@ -1,24 +1,39 @@
-usuarioLista = ["user1", "user2"]
-senhaLista = ["1234", "12345"]
+def validacaoLogin(lista):
+    usuario = input("Digite seu usuário: ")
+    senha = input("Digite sua senha: ")
+    if usuario in lista and lista[usuario] == senha:
+        print("Login bem-sucedido!")
+        return True
+    else:   
+        print("Usuário ou senha INCORRETA!!")
+        return False
 
-#menu = input("""
-#Digite o numero referente a opção que deseja acessar
-#
-#----------------------------------------------
-#|  [1] LOGIN      [2] REGISTRO     [3] SAIR  |
-#----------------------------------------------
-#""")
+def registroLogin(lista):
+    usuario = input("Digite o usuário que deseja registrar: ")
+    senha = input("Digite a senha que deseja cadastrar: ")
+    lista[usuario] = senha
+    return False
 
+# ----------------------------------------------------------------------------
+usuarioLista = {
+"user1": "12345",
+"user2": "54321",
+}
+status = False
+while status == False:
+    menu = input("""
+    Digite o numero referente a opção que deseja acessar
 
-usuarioLogin = input("Digite seu usuário: ")
-if usuarioLogin in usuarioLista:
-    senhaLogin = input("Digite sua senha: ")
-    if senhaLogin in senhaLista:
-            print("Login efetuado com sucesso\n\nSeja bem vindo!")
+    ----------------------------------------------
+    |  [1] LOGIN      [2] REGISTRO     [3] SAIR  |
+    ----------------------------------------------
+    """)
+    if menu == "1":
+        status = validacaoLogin(usuarioLista)
+    elif menu == "2":
+        status = registroLogin(usuarioLista)
+    elif menu == "3":
+        print("Obrigado por utilizar o sistema!")
+        status = True
     else:
-        print("Senha incorreta!")
-else:
-    print("Usuário inválido!")
-
-
-
+        print("Comando não reconhecido")

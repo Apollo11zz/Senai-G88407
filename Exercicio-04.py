@@ -1,15 +1,4 @@
-def calcularCustoViagem(distancia, tipoVeiculo):
-    if tipoVeiculo == "CARRO":
-        custoPorKm = 0.5
-    elif tipoVeiculo == "MOTO":
-        custoPorKm = 0.2
-    elif tipoVeiculo == "BICICLETA":
-        custoPorKm = 0.1
-    else:
-        return None
-    
-    custoTotal = distancia * custoPorKm
-    return custoTotal
+import funcoes
 
 distanciaDaViagem = float(input("Digite a distancia da viagem(Km): "))
 veiculo = int(input("\tInforme o Tipo de veículo\n(1)CARRO\t(2)MOTO\t\t(3)BICICLETA\n"))
@@ -22,7 +11,7 @@ elif veiculo == 3:
 else:
     veiculo = "INVALIDO"
 
-custo = calcularCustoViagem(distanciaDaViagem, veiculo)
+custo = funcoes.calcularCustoViagem(distanciaDaViagem, veiculo)
 if custo == None:
     print("Tipo de veículo inválido!")
 else:
