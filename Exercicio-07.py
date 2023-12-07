@@ -1,13 +1,13 @@
 import pandas as pd
 
 
-dados = {"Nome": ["Wendel", "Paulo", "Mikaias", "Gersoney", "Fernando"],
-        "idade": [20, 20, 21, 25, 23],
-        "cidade" : ["Camaçari", "Feira de santana", "Berimbal", "Catu de Abrante", "Jauá"]
-        }
-df = pd.DataFrame(dados)
-#print(df)
+dados = {
+    "Mês": ["Janeiro", "Fevereiro", "Março","Janeiro", "Fevereiro", "Março"],
+    "Produto": ["Camisa", "Bermuda", "Calça","Camisa", "Bermuda", "Calça" ],
+    "Vendas": [9, 14, 18, 24, 11, 0],
+}
 
-for dado in df.values:
-        #print(dado)
-        print(dado[0], dado[1], dado[2]) 
+df = pd.DataFrame(dados)
+df_janeiro = df.query('Mês == "Janeiro"')
+print(df_janeiro)
+
