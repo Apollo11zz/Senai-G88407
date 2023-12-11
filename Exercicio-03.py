@@ -1,18 +1,11 @@
+# Por: VICTOR GABRIEL DE JESUS MOURA
+# SENAI CAMAÇARI - CURSO TECNICO DE DESENVOLVIMENTO DE SISTEMAS
+# DEZEMBRO DE 2023
+
+import funcoes
 
 idade = int(input("Digite sua idade: "))
-
+# Verificação da faixa etaria do usuário
 print("-"*40)
-
-if idade <= 13:
-    print("Você é uma criança")
-elif idade <= 18:
-    print("Você é um adolescente")
-elif idade <= 60:
-    print("Você é um adulto")
-else:
-    print("Você é um idoso")
-
-print("-"*40)    
-
-
-    
+funcoes.verificacaoFaixaEtaria(idade)
+print("-"*40) 

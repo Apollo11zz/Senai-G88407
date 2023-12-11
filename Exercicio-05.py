@@ -1,24 +1,13 @@
-def validacaoLogin(lista):
-    usuario = input("Digite seu usuário: ")
-    senha = input("Digite sua senha: ")
-    if usuario in lista and lista[usuario] == senha:
-        print("Login bem-sucedido!")
-        return True
-    else:   
-        print("Usuário ou senha INCORRETA!!")
-        return False
+# Por: VICTOR GABRIEL DE JESUS MOURA
+# SENAI CAMAÇARI - CURSO TECNICO DE DESENVOLVIMENTO DE SISTEMAS
+# DEZEMBRO DE 2023
 
-def registroLogin(lista):
-    usuario = input("Digite o usuário que deseja registrar: ")
-    senha = input("Digite a senha que deseja cadastrar: ")
-    lista[usuario] = senha
-    return False
-
-# ----------------------------------------------------------------------------
+import funcoes
 usuarioLista = {
 "user1": "12345",
 "user2": "54321",
 }
+
 status = False
 while status == False:
     menu = input("""
@@ -29,9 +18,9 @@ while status == False:
     ----------------------------------------------
     """)
     if menu == "1":
-        status = validacaoLogin(usuarioLista)
+        status = funcoes.validacaoLogin(usuarioLista)
     elif menu == "2":
-        status = registroLogin(usuarioLista)
+        status = funcoes.registroLogin(usuarioLista)
     elif menu == "3":
         print("Obrigado por utilizar o sistema!")
         status = True
